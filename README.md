@@ -1,5 +1,5 @@
 
-# E-Commerce Frontend
+# Match String
 
 ## How to install
 - After pull from repository,  run : yarn install
