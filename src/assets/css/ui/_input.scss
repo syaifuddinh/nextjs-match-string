@@ -1,0 +1,64 @@
+@use "sass:map";
+@import "../_variables";
+
+$checklist-input-width: 1.5rem;
+$number-input-height: 1.5rem;
+
+.checklist-input {
+    width: #{$checklist-input-width};  
+    height: #{$checklist-input-width};  
+    min-width: #{$checklist-input-width};  
+    min-height: #{$checklist-input-width};  
+    max-width: #{$checklist-input-width};  
+    max-height: #{$checklist-input-width};  
+    padding: #{$base-spacing * 0.25};
+    background: transparent;
+    border: 1px solid #{map.get($colors, "dark-primary")};
+    border-radius: #{$checklist-input-width * 100};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+        background: #{map.get($colors, "dark-primary")};
+    }
+
+    img {
+        height: #{$checklist-input-width * 0.9}; 
+        width: auto;
+    }
+}
+
+.number-input {
+    display: flex;
+
+    .number-input_field,
+    .number-input_control {
+        height: #{$number-input-height};
+        width: #{$number-input-height};
+        padding: #{$base-spacing * 0.25};
+        display: flex;
+        align-items: center;
+    }
+
+    .number-input_field {
+        border-top: 1px solid #{map.get($colors, "light-gray")};
+        border-bottom: 1px solid #{map.get($colors, "light-gray")};
+        min-width: 4rem;
+        padding-left: #{$base-spacing * 0.5}
+    }
+
+    .number-input_control {
+        justify-content: center;
+        border: 1px solid #{map.get($colors, "light-gray")};
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1.25rem;
+
+        &.disabled {
+            color: #{map.get($colors, "dark-gray")};
+            cursor: not-allowed;
+        }
+    }
+}

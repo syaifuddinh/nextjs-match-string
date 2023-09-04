@@ -1,0 +1,70 @@
+@use "sass:map";
+@import "../_variables";
+
+$thumbnail-width: 7rem;
+
+.order-card {
+    padding: #{$base-spacing};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #{map.get($colors, "light-gray")};
+
+    .order-card_remove  {
+        cursor: pointer;
+
+        img {
+            height: 1rem;
+            width: auto;
+        }
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .order-card_description__label {
+        margin-bottom: #{$base-spacing};
+        cursor: pointer;
+    }
+
+    .order-card_description__label:hover {
+        text-decoration: underline;
+        font-weight: 500;
+        color: #{map.get($colors, "secondary")}
+    }
+
+    .order-card_price {
+        font-weight: 500;
+        margin-top: #{$base-spacing * 0.5};
+    }
+
+    .order-card_left {
+        display: flex;
+        align-items: center;
+        gap: #{$base-spacing};
+    }
+
+    .order-card_right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .order-card_thumbnail {
+        overflow: hidden;
+        border-radius: #{$base-radius};
+        width: #{$thumbnail-width};
+        height: #{$thumbnail-width};
+        max-width: #{$thumbnail-width};
+        max-height: #{$thumbnail-width};
+        min-width: #{$thumbnail-width};
+        min-height: #{$thumbnail-width};
+
+        img {
+            height: auto;
+            width: #{$thumbnail-width};
+        }
+    }
+}

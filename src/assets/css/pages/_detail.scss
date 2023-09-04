@@ -1,0 +1,34 @@
+@use "sass:map";
+@import "../_variables.scss";
+
+.detail {
+    display: flex;
+    gap: #{$base-spacing};
+    margin-top: #{$base-spacing};
+
+    .detail_thumbnail {
+        overflow: hidden;
+        border-radius: #{$base-radius};
+        max-height: 12rem;
+
+        img {
+            width: 10rem;
+            height: auto;
+        }
+    }
+
+    .detail_description {
+        padding: #{$base-spacing};
+        padding-left: 0;
+        .detail_description__item-name {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .detail_description__price {
+            font-weight: 500;
+            font-size: 1.25rem;
+            margin-top: #{$base-spacing * 0.5};
+        }
+    }
+}

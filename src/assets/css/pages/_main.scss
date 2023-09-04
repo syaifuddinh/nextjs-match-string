@@ -1,0 +1,53 @@
+@use "sass:map";
+@import "../_variables.scss";
+
+.main {
+    .main_heading,
+    .main_action,
+    .main_footer {
+        padding: #{$base-spacing};
+    }
+
+    h3 {
+        text-align: center;
+        color: #{map.get($colors, "dark-gray")};
+        font-weight: 600;
+    }
+
+    .main_action {
+        border-top: 1px solid #{map.get($colors, "light-gray")};
+        border-bottom: 2px solid #{map.get($colors, "light-gray")};
+        font-weight: 500;
+        align-items: center;
+    }
+
+    .main_heading {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .main_footer__price {
+        font-weight: 600;
+    }
+
+    .main_action__select-all {
+        display: flex;
+        gap: #{$base-spacing * 0.75};
+        align-items: center;
+    }
+
+
+    .main_action, .main_footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main_footer {
+        font-size: 1rem;
+
+        .main_footer__qty {
+            color: #{map.get($colors, "dark-gray")};
+            font-weight: 500;
+        }
+    }
+}

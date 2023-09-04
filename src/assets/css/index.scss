@@ -1,0 +1,24 @@
+
+
+@import "./_base.scss";
+
+@import "./pages/_main.scss";
+
+@import "./ui/_button.scss";
+@import "./ui/_input.scss";
+
+@import "./components/_order-card.scss";
+
+.screen {
+    display: flex;    
+    gap: 1 rem;
+
+    button {
+        margin-top: 1rem;
+    }
+}
+
+.screen-1, .screen-2 {
+    border: 1px solid gray;
+    padding: 1rem;
+}
